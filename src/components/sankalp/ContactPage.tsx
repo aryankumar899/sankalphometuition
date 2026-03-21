@@ -73,10 +73,10 @@ export function ContactPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { icon: MapPin, title: "Visit Us", info: "Lalpur Chowk, Ranchi, Jharkhand – 834001", sub: "Mon–Sat: 9 AM – 7 PM", color: "from-violet-500 to-indigo-600" },
-              { icon: Phone, title: "Call Us", info: "+91 90000 00000", sub: "+91 80000 00000", color: "from-emerald-500 to-teal-500" },
+              { icon: MapPin, title: "Visit Us", info: "Indrapuri Ratu Road, Ranchi, Jharkhand", sub: "Mon–Sat: 9 AM – 7 PM", color: "from-violet-500 to-indigo-600" },
+              { icon: Phone, title: "Call Us", info: "+91 9431526500", sub: "+91 80000 00000", color: "from-emerald-500 to-teal-500" },
               { icon: Mail, title: "Email Us", info: "info@sankalptuition.in", sub: "Reply within 2 hours", color: "from-amber-500 to-orange-500" },
-              { icon: MessageCircle, title: "WhatsApp", info: "+91 90000 00000", sub: "Available 8 AM – 10 PM", color: "from-green-500 to-emerald-500" },
+              { icon: MessageCircle, title: "WhatsApp", info: "+91 99431526500", sub: "Available 8 AM – 10 PM", color: "from-green-500 to-emerald-500" },
             ].map((c, i) => (
               <FadeIn key={c.title} delay={i * 0.08}>
                 <div className="bg-white/[0.03] border border-white/[0.07] rounded-2xl p-6 hover:border-white/[0.14] transition-all duration-300">
@@ -203,7 +203,7 @@ export function ContactPage() {
                     ))}
                   </div>
                   <div className="mt-5 pt-5 border-t border-white/[0.06]">
-                    <a href="https://wa.me/919000000000" className="flex items-center justify-center gap-2 bg-[#25D366]/15 border border-[#25D366]/25 text-[#25D366] hover:bg-[#25D366]/25 px-5 py-3 rounded-xl font-semibold text-sm transition-all">
+                    <a href="https://wa.me/9431526500" className="flex items-center justify-center gap-2 bg-[#25D366]/15 border border-[#25D366]/25 text-[#25D366] hover:bg-[#25D366]/25 px-5 py-3 rounded-xl font-semibold text-sm transition-all">
                       <MessageCircle size={16} /> Chat on WhatsApp Now
                     </a>
                   </div>

@@ -145,9 +145,15 @@ export function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div>
               <Link to="/" className="flex items-center m-0">
-              <div className="m=0 mb-0">
-                 <img width={300} height={300} src="..\assets\sankalplogo_page-0001.png"></img>
-                 </div>
+             <div className="-mt-18 mb-2">
+  <img 
+    width={260} 
+    height={260} 
+    src="/assets/sankalplogo_page-0001.png" 
+    alt="Sankalp Home Tuition Ranchi Logo"
+    className="object-contain"
+  />
+</div>
               </Link>
               <p className="text-slate-500 text-sm leading-relaxed mb-6">Ranchi's most trusted home tuition service. Empowering students from Class 1–12 and competitive exam aspirants since 2010.</p>
               <div className="flex gap-2.5">

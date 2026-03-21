@@ -121,8 +121,8 @@ export function HomePage() {
               <Phone size={17} /> Book Free Demo Class
               <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link to="/courses" className="group flex items-center gap-2.5 bg-white/[0.05] border border-white/[0.12] text-white hover:bg-white/[0.09] px-8 py-4 rounded-2xl font-semibold text-base transition-all duration-300">
-              <Play size={15} fill="currentColor" /> Explore Courses
+            <Link to="/about" className="group flex items-center gap-2.5 bg-white/[0.05] border border-white/[0.12] text-white hover:bg-white/[0.09] px-8 py-4 rounded-2xl font-semibold text-base transition-all duration-300">
+              <Play size={15} fill="currentColor" /> About Us
             </Link>
           </motion.div>
 
@@ -287,11 +287,6 @@ export function HomePage() {
               </FadeIn>
             ))}
           </div>
-          <FadeIn className="text-center mt-10">
-            <Link to="/teachers" className="inline-flex items-center gap-2 text-violet-400 hover:text-white font-semibold border border-violet-500/30 hover:border-violet-400/50 hover:bg-violet-500/10 px-7 py-3 rounded-xl transition-all text-sm">
-              Meet All Teachers <ArrowRight size={15} />
-            </Link>
-          </FadeIn>
         </div>
       </section>
 
@@ -351,7 +346,7 @@ export function HomePage() {
                   <Link to="/contact" className="flex items-center justify-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white px-8 py-4 rounded-2xl font-semibold shadow-2xl shadow-violet-500/30 hover:scale-105 transition-all">
                     <Phone size={17} /> Book Free Demo Class
                   </Link>
-                  <a href="tel:+919000000000" className="flex items-center justify-center gap-2 bg-white/[0.05] border border-white/[0.1] text-white hover:bg-white/[0.09] px-8 py-4 rounded-2xl font-semibold transition-all">
+                  <a href="tel:+91 9431526500" className="flex items-center justify-center gap-2 bg-white/[0.05] border border-white/[0.1] text-white hover:bg-white/[0.09] px-8 py-4 rounded-2xl font-semibold transition-all">
                     <Phone size={17} /> Call: +91 9431526500
                   </a>
                 </div>
