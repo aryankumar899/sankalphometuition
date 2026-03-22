@@ -75,7 +75,7 @@ export function ContactPage() {
             {[
               { icon: MapPin, title: "Visit Us", info: "Indrapuri Ratu Road, Ranchi, Jharkhand", sub: "Mon–Sat: 9 AM – 7 PM", color: "from-violet-500 to-indigo-600" },
               { icon: Phone, title: "Call Us", info: "+91 9431526500", sub: "+91 80000 00000", color: "from-emerald-500 to-teal-500" },
-              { icon: Mail, title: "Email Us", info: "info@sankalptuition.in", sub: "Reply within 2 hours", color: "from-amber-500 to-orange-500" },
+              { icon: Mail, title: "Email Us", info: "Sankalphometuition2012@gmail.com", sub: "Reply within 2 hours", color: "from-amber-500 to-orange-500" },
               { icon: MessageCircle, title: "WhatsApp", info: "+91 99431526500", sub: "Available 8 AM – 10 PM", color: "from-green-500 to-emerald-500" },
             ].map((c, i) => (
               <FadeIn key={c.title} delay={i * 0.08}>
@@ -98,118 +98,96 @@ export function ContactPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10">
             {/* Inquiry Form */}
-            <FadeIn>
-              <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-8">
-                <div className="flex items-center gap-3 mb-7">
-                  <div className="w-10 h-10 bg-gradient-to-br from-violet-600 to-indigo-600 rounded-xl flex items-center justify-center">
-                    <BookOpen size={18} className="text-white" />
-                  </div>
-                  <div>
-                    <h2 className="text-white font-black text-lg">Book a Demo / Inquiry</h2>
-                    <p className="text-slate-400 text-xs">Get a free demo class booked within 24 hours</p>
-                  </div>
-                </div>
+  <FadeIn>
+  <div className="bg-[#0B1220] border border-white/[0.08] rounded-2xl overflow-hidden shadow-2xl">
 
-                {inquirySent ? (
-                  <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center py-12">
-                    <CheckCircle2 size={48} className="text-emerald-400 mx-auto mb-4" />
-                    <h3 className="text-white font-bold text-lg mb-2">Inquiry Sent!</h3>
-                    <p className="text-slate-400 text-sm">We'll contact you within 2 hours to schedule your free demo class.</p>
-                  </motion.div>
-                ) : (
-                  <form onSubmit={handleInquiry} className="flex flex-col gap-4">
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <FormInput label="Student Name" placeholder="Enter student name" required />
-                      <FormInput label="Parent Name" placeholder="Enter parent name" required />
-                    </div>
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <FormInput label="Mobile Number" type="tel" placeholder="+91 XXXXX XXXXX" required />
-                      <FormInput label="Email Address" type="email" placeholder="your@email.com" />
-                    </div>
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <FormSelect label="Class / Grade" required options={["Class 1", "Class 2", "Class 3", "Class 4", "Class 5", "Class 6", "Class 7", "Class 8", "Class 9", "Class 10", "Class 11", "Class 12", "JEE Preparation", "NEET Preparation"]} />
-                      <FormSelect label="Subject Required" required options={["Mathematics", "Science", "Physics", "Chemistry", "Biology", "English", "Social Studies", "Hindi", "Computer Science", "All Subjects"]} />
-                    </div>
-                    <FormSelect label="Preferred Class Type" required options={["Home Tuition (Teacher Visits Home)", "Online Live Classes", "Group Classes (Batch)"]} />
-                    <div>
-                      <label className="block text-slate-300 text-sm font-medium mb-2">Additional Message</label>
-                      <textarea rows={3} placeholder="Any specific requirements or questions..." className="w-full bg-white/[0.04] border border-white/[0.1] text-white placeholder-slate-500 px-4 py-3 rounded-xl text-sm focus:outline-none focus:border-violet-500/60 focus:bg-white/[0.06] transition-all duration-200 resize-none" />
-                    </div>
-                    <motion.button type="submit" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex items-center justify-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 text-white px-6 py-3.5 rounded-xl font-semibold text-sm shadow-xl shadow-violet-500/25 hover:shadow-violet-500/40 transition-all">
-                      <Send size={16} /> Submit Inquiry
-                    </motion.button>
-                  </form>
-                )}
-              </div>
-            </FadeIn>
+    {/* HEADER */}
+    <div className="p-6 border-b border-white/[0.08] bg-gradient-to-r from-white/[0.03] to-white/[0.01]">
+      <h2 className="text-white font-bold text-xl flex items-center gap-2">
+        📘 Book a Demo Class
+      </h2>
+      <p className="text-slate-400 text-sm mt-1">
+        Fill the form below and we will contact you shortly
+      </p>
+    </div>
+
+    {/* FORM WRAPPER */}
+    <div className="relative">
+
+      {/* TOP OVERLAY (Google purple bar hide + blend effect) */}
+      <div className="absolute top-0 left-0 w-full h-12 bg-[#0B1220] z-10"></div>
+
+      {/* GOOGLE FORM */}
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdGQvU_AJsdteBkCDtayt4FbnTwjsca4_8qhTkBUuKVfJB2XQ/viewform?embedded=true"
+        className="w-full h-[1000px] sm:h-[1300px] md:h-[1600px] lg:h-[1800px] border-0"
+      >
+        Loading…
+      </iframe>
+
+    </div>
+
+  </div>
+</FadeIn>
 
             {/* Feedback Form */}
-            <div className="flex flex-col gap-8">
-              <FadeIn delay={0.1}>
-                <div className="bg-white/[0.03] border border-white/[0.07] rounded-2xl p-8">
-                  <div className="flex items-center gap-3 mb-7">
-                    <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center">
-                      <User size={18} className="text-white" />
-                    </div>
-                    <div>
-                      <h2 className="text-white font-black text-lg">Share Feedback</h2>
-                      <p className="text-slate-400 text-xs">Help us serve you better</p>
-                    </div>
-                  </div>
+          <FadeIn delay={0.1}>
+  <div className="bg-[#0B1220] border border-white/[0.08] rounded-2xl overflow-hidden shadow-2xl">
 
-                  {feedbackSent ? (
-                    <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center py-8">
-                      <CheckCircle2 size={40} className="text-amber-400 mx-auto mb-3" />
-                      <h3 className="text-white font-bold mb-1">Thank You!</h3>
-                      <p className="text-slate-400 text-sm">Your feedback helps us grow and improve.</p>
-                    </motion.div>
-                  ) : (
-                    <form onSubmit={handleFeedback} className="flex flex-col gap-4">
-                      <FormInput label="Your Name" placeholder="Enter your name" required />
-                      <FormInput label="Mobile / Email" placeholder="Contact details" required />
-                      <FormSelect label="Feedback Type" options={["General Feedback", "Teacher Performance", "Service Quality", "Suggestion", "Complaint"]} />
-                      <div>
-                        <label className="block text-slate-300 text-sm font-medium mb-2">Your Rating</label>
-                        <div className="flex gap-2">
-                          {[1, 2, 3, 4, 5].map((n) => (
-                            <button key={n} type="button" className="w-10 h-10 bg-white/[0.05] border border-white/[0.1] rounded-xl text-amber-400 hover:bg-amber-500/20 hover:border-amber-500/40 transition-colors text-sm font-bold">
-                              {n}★
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-                      <div>
-                        <label className="block text-slate-300 text-sm font-medium mb-2">Your Feedback</label>
-                        <textarea rows={3} placeholder="Share your experience with Sankalp..." className="w-full bg-white/[0.04] border border-white/[0.1] text-white placeholder-slate-500 px-4 py-3 rounded-xl text-sm focus:outline-none focus:border-amber-500/60 transition-all duration-200 resize-none" />
-                      </div>
-                      <motion.button type="submit" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-6 py-3.5 rounded-xl font-semibold text-sm shadow-xl shadow-amber-500/25 transition-all">
-                        <Send size={16} /> Submit Feedback
-                      </motion.button>
-                    </form>
-                  )}
-                </div>
-              </FadeIn>
+    {/* HEADER */}
+    <div className="p-6 border-b border-white/[0.08] bg-gradient-to-r from-white/[0.03] to-white/[0.01]">
+      <h2 className="text-white font-bold text-xl flex items-center gap-2">
+        💬 Share Feedback
+      </h2>
+      <p className="text-slate-400 text-sm mt-1">
+        Help us improve our services
+      </p>
+    </div>
 
-              {/* Quick Contact Chips */}
-              <FadeIn delay={0.2}>
-                <div className="bg-white/[0.03] border border-white/[0.07] rounded-2xl p-6">
-                  <h3 className="text-white font-bold text-sm mb-4 flex items-center gap-2"><Clock size={15} className="text-violet-400" /> Office Hours</h3>
-                  <div className="flex flex-col gap-2.5">
-                    {[["Monday – Friday", "9:00 AM – 7:00 PM"], ["Saturday", "9:00 AM – 5:00 PM"], ["Sunday", "10:00 AM – 2:00 PM"], ["WhatsApp Support", "8:00 AM – 10:00 PM Daily"]].map(([day, time]) => (
-                      <div key={day} className="flex items-center justify-between">
-                        <span className="text-slate-400 text-sm">{day}</span>
-                        <span className="text-white text-sm font-medium">{time}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-5 pt-5 border-t border-white/[0.06]">
-                    <a href="https://wa.me/9431526500" className="flex items-center justify-center gap-2 bg-[#25D366]/15 border border-[#25D366]/25 text-[#25D366] hover:bg-[#25D366]/25 px-5 py-3 rounded-xl font-semibold text-sm transition-all">
-                      <MessageCircle size={16} /> Chat on WhatsApp Now
-                    </a>
-                  </div>
-                </div>
-              </FadeIn>
-            </div>
+    {/* FORM WRAPPER */}
+    <div className="relative">
+
+      {/* TOP OVERLAY (hide Google header) */}
+      <div className="absolute top-0 left-0 w-full h-14 z-20"></div>
+
+      {/* GOOGLE FORM */}
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSc0rczNnGcrzJb7_gqeUukFGFIFySxZN4SRUPRHi4-RpKFd8g/viewform?embedded=true"
+        className="w-full h-[900px] sm:h-[1100px] md:h-[1300px] lg:h-[1500px] border-0"
+      >
+        Loading…
+      </iframe>
+
+    </div>
+
+  </div>
+
+    <FadeIn delay={0.2}>
+    <div className="bg-white/[0.03] border border-white/[0.07] rounded-2xl p-6">
+      <h3 className="text-white font-bold text-sm mb-4 flex items-center gap-2">
+        <Clock size={15} className="text-violet-400" /> Office Hours
+      </h3>
+      <div className="flex flex-col gap-2.5">
+        {[["Monday – Friday", "9:00 AM – 7:00 PM"], ["Saturday", "9:00 AM – 5:00 PM"], ["Sunday", "10:00 AM – 2:00 PM"], ["WhatsApp Support", "8:00 AM – 10:00 PM Daily"]].map(([day, time]) => (
+          <div key={day} className="flex items-center justify-between">
+            <span className="text-slate-400 text-sm">{day}</span>
+            <span className="text-white text-sm font-medium">{time}</span>
+          </div>
+        ))}
+      </div>
+      <div className="mt-5 pt-5 border-t border-white/[0.06]">
+        <a
+          href="https://wa.me/9431526500"
+          className="flex items-center justify-center gap-2 bg-[#25D366]/15 border border-[#25D366]/25 text-[#25D366] hover:bg-[#25D366]/25 px-5 py-3 rounded-xl font-semibold text-sm transition-all"
+        >
+          <MessageCircle size={16} /> Chat on WhatsApp Now
+        </a>
+      </div>
+    </div>
+  </FadeIn>
+</FadeIn>
+
+
           </div>
         </div>
       </section>
@@ -219,14 +197,20 @@ export function ContactPage() {
         <div className="max-w-7xl mx-auto">
           <FadeIn className="mb-6">
             <h2 className="text-white font-black text-xl flex items-center gap-2"><MapPin size={20} className="text-violet-400" /> Find Us in Ranchi</h2>
-            <p className="text-slate-400 text-sm mt-1">Lalpur Chowk, Ranchi, Jharkhand – 834001</p>
+            <p className="text-slate-400 text-sm mt-1">Indrapuri Ratu, Ranchi, Jharkhand – 834001</p>
           </FadeIn>
           <FadeIn delay={0.1}>
             <div className="rounded-2xl overflow-hidden border border-white/[0.08] shadow-2xl h-80">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.1836305!2d85.3095!3d23.3441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e104aa5db7f9%3A0x2b793e3fbd!2sLalpur%2C%20Ranchi%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1683000000000!5m2!1sen!2sin"
-                width="100%" height="100%" style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Sankalp Home Tuition Location"
-              />
+  src="https://www.google.com/maps?q=23.3833365,85.3128511&z=15&output=embed"
+  width="100%"
+  height="100%"
+  style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  title="Sankalp Home Tuition Location"
+/>
             </div>
           </FadeIn>
         </div>
